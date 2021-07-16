@@ -1,0 +1,20 @@
+import { CharactersCollection } from "./CharactersCollection";
+import { LinkedList } from "./LinkedList";
+import { NumbersCollection } from "./NumbersCollection";
+import { Sorter } from "./Sorter";
+
+const numbersCollection = new NumbersCollection([3, 2, 1]);
+const charactersCollection = new CharactersCollection("test");
+const sorterNumber = new Sorter(numbersCollection);
+sorterNumber.sort();
+console.log(numbersCollection);
+const sorterCharacters = new Sorter(charactersCollection);
+sorterCharacters.sort();
+console.log(charactersCollection);
+const linkedList = new LinkedList();
+linkedList.add(3);
+linkedList.add(2);
+linkedList.add(1);
+const sorterLinkedList = new Sorter(linkedList);
+sorterLinkedList.sort();
+linkedList.print();
