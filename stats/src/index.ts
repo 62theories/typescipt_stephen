@@ -1,12 +1,5 @@
-import fs from "fs";
+import { manUnitedWins as way1 } from "./way1inheritance/index"
+import { manUnitedWins as way2 } from "./way2composition/index"
 
-const matches = fs
-  .readFileSync("football.csv", {
-    encoding: "utf-8",
-  })
-  .split("\n")
-  .map((row) => {
-    return row.split(",");
-  });
-
-console.log(matches);
+console.log("way1 : ", way1)
+console.log("way2 : ", way2)

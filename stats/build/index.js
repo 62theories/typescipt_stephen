@@ -1,15 +1,6 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-var fs_1 = __importDefault(require("fs"));
-var matches = fs_1.default
-    .readFileSync("football.csv", {
-    encoding: "utf-8",
-})
-    .split("\n")
-    .map(function (row) {
-    return row.split(",");
-});
-console.log(matches);
+var index_1 = require("./way1inheritance/index");
+var index_2 = require("./way2composition/index");
+console.log("way1 : ", index_1.manUnitedWins);
+console.log("way2 : ", index_2.manUnitedWins);
