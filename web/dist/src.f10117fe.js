@@ -2033,11 +2033,10 @@ var Sync_1 = require("./Sync");
 var rootUrl = "http://localhost:3000/users";
 
 var User = function () {
-  function User(data) {
-    this.data = data;
+  function User(attrs) {
     this.events = new Eventing_1.Eventing();
     this.sync = new Sync_1.Sync(rootUrl);
-    this.attributes = new Attributes_1.Attributes(this.data);
+    this.attributes = new Attributes_1.Attributes(attrs);
   }
 
   return User;
@@ -2088,7 +2087,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55054" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54158" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
